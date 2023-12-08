@@ -9,14 +9,9 @@ namespace Der_BBW_Netzrechner
 
         private void TxtInput_TextChanged(object sender, EventArgs e)
         {
-            if(Methods.StringToInt(Text) > 255)
-            {
-
-            }
-            string s = Methods.StringToBinary(Methods.StringToInt(Text));
+            string s = Methods.StringToBinary(Methods.StringToInt(TDecOct1.Text));
             if(Text.Length > 0) 
-                LBinOct1.Text = s;
-            this.Text = s;
+                LBinOct1.Text = s.PadLeft(8, '0');
         }
     }
 }

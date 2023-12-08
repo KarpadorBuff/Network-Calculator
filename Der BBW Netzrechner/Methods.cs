@@ -9,7 +9,7 @@ namespace Der_BBW_Netzrechner
 {
     internal class Methods
     {
-        public static int StringToInt(string input)
+        public static string StringToInt(string input)
         {
             string str = null;
             int ret;
@@ -22,10 +22,6 @@ namespace Der_BBW_Netzrechner
                 if (output != null) str += output.ToString();
             }
             if(str == null) str = "";
-            foreach (char c in str) 
-            { 
-            
-            }
             return str;
         }
         public static string StringToBinary(string decimalvalue)
