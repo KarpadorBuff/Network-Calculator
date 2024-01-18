@@ -9,7 +9,7 @@ namespace Der_BBW_Netzrechner
 {
     internal class Methods
     {
-        public static string StringToInt(string input)
+        public static int StringToInt(string input)
         {
             string str = null;
             int ret;
@@ -21,14 +21,22 @@ namespace Der_BBW_Netzrechner
                     output = c - 48;
                 if (output != null) str += output.ToString();
             }
-            if(str == null) str = "";
-            return str;
+            str ??= "";
+            try
+            {
+                return Int16.Parse(str);
+            }
+            catch
+            {
+                return 0;
+            }
+            
         }
         public static string StringToBinary(string decimalvalue)
         {
             Debug.WriteLine(decimalvalue);
-            if (decimalvalue == "") return "0";
-            else return Convert.ToString(Convert.ToInt16(decimalvalue), 2);
+            if (decimalvalue == "") return "";
+            else return Convert.ToString(Convert.ToInt16(decimalvalue), 2).PadLeft(8,'0');
         }
     }
 }
