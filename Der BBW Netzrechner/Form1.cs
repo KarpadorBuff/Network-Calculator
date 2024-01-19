@@ -16,28 +16,49 @@ namespace Der_BBW_Netzrechner
         private void Form1_Load(object sender, EventArgs e)
         {
             address = new MyIPAddress(baseIP);
+            for (int i = 0; i < 4; i++)
+            {
+                for (int y = 8 * i; y < 8 + 8 * i; y++)
+                {
+                    PictureBox pb = new()
+                    {
+                        Image = Resources.banana_happy,
+                        Visible = true,
+                        Enabled = true,
+                        Size = new Size(15, 15),
+                        Location = new Point(15 * y + i * 10, 500),
+                        SizeMode = PictureBoxSizeMode.StretchImage
+
+                    };
+                    this.Controls.Add(pb);
+                    pb.Show();
+                    pb.Update();
+                    pbarray[y] = pb;
+                    Thread.Sleep(0);
+                }
+            }
+            //for (int i = 0; i < 32; i++)
+            //{
+            //    PictureBox pb = new()
+            //    {
+            //        Image = Resources.banana_happy,
+            //        Visible = true,
+            //        Enabled = true,
+            //        Size = new Size(15, 15),
+            //        Location = new Point(15 * i + 10*i, 500),
+            //        SizeMode = PictureBoxSizeMode.StretchImage
+            //    };
+            //    this.Controls.Add(pb);
+            //    pb.Show();
+            //    pb.Update();
+            //    pbarray[i] = pb;
+            //    Thread.Sleep(0);
+            //}
             //Fill Decimal values from address values
             TDecOct1.Text = baseIP[0].ToString();
             TDecOct2.Text = baseIP[1].ToString();
             TDecOct3.Text = baseIP[2].ToString();
             TDecOct4.Text = baseIP[3].ToString();
-            for (int i = 0; i <= 32; i++)
-            {
-                PictureBox pb = new()
-                {
-                    Image = Resources.banana_happy,
-                    Visible = true,
-                    Enabled = true,
-                    Size = new Size(15, 15),
-                    Location = new Point(15 * i, 500),
-                    SizeMode = PictureBoxSizeMode.StretchImage
-                };
-                this.Controls.Add(pb);
-                pb.Show();
-                pb.Update();
-                pbarray[i] = pb;
-                Thread.Sleep(0);
-            }
         }
 
         private void Decimal_Text_Changed(object sender, EventArgs e)
@@ -81,7 +102,7 @@ namespace Der_BBW_Netzrechner
             netzaddresse3.Text = address.getNetaddress_Binary()[2];
             netzaddresse4.Text = address.getNetaddress_Binary()[3];
 
-            Bananary.BinaryToBananary(address.getIpBinary(address.getIpBinary()));
+            Bananary.BinaryToBananary(address.getIpBinary(address.getIpBinary()), pbarray);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
