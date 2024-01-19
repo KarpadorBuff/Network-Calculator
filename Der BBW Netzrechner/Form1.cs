@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Net;
 
 namespace Der_BBW_Netzrechner
 {
@@ -11,6 +10,7 @@ namespace Der_BBW_Netzrechner
         }
         MyIPAddress address;
         private readonly int[] baseIP = { 192, 168, 0, 0 };
+        private PictureBox[] pbarray = new PictureBox[32];
         private void Form1_Load(object sender, EventArgs e)
         {
             address = new MyIPAddress(baseIP);
@@ -19,7 +19,9 @@ namespace Der_BBW_Netzrechner
             TDecOct2.Text = baseIP[1].ToString();
             TDecOct3.Text = baseIP[2].ToString();
             TDecOct4.Text = baseIP[3].ToString();
+            pbarray[0] = pictureBox1;
         }
+
         private void UpdateAll()
         {
             address.netmask_decimal = Methods.StringToInt(TBnetmask.Text);
@@ -35,13 +37,6 @@ namespace Der_BBW_Netzrechner
             string[] arrayBinary = address.getIpBinary();
             string[] subnetBinary = address.getSubnetmaskBinary();
 
-
-
-            
-
-
-            
-
             //debug msgs
             Debug.Write("current IP: ");
             for (int i = 0; i < arrayDecimal.Length; i++)
@@ -53,11 +48,6 @@ namespace Der_BBW_Netzrechner
                 }
             }
             Debug.Write('\n');
-        }
-
-        private void Decimal_Textchanged(object sender, EventArgs e)
-        {
-
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -115,6 +105,16 @@ namespace Der_BBW_Netzrechner
             netmask_I2.Text = address.getWildcardMask()[1];
             netmask_I3.Text = address.getWildcardMask()[2];
             netmask_I4.Text = address.getWildcardMask()[3];
+
+            broadcast1.Text = address.getBroadcast_Binary()[0];
+            broadcast2.Text = address.getBroadcast_Binary()[1];
+            broadcast3.Text = address.getBroadcast_Binary()[2];
+            broadcast4.Text = address.getBroadcast_Binary()[3];
+
+            netzaddresse1.Text = address.getNetaddress_Binary()[0];
+            netzaddresse2.Text = address.getNetaddress_Binary()[1];
+            netzaddresse3.Text = address.getNetaddress_Binary()[2];
+            netzaddresse4.Text = address.getNetaddress_Binary()[3];
 
         }
     }

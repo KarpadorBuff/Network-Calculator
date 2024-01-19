@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace Der_BBW_Netzrechner
 {
@@ -30,13 +25,13 @@ namespace Der_BBW_Netzrechner
             {
                 return 0;
             }
-            
+
         }
         public static string StringToBinary(string decimalvalue)
         {
             Debug.WriteLine(decimalvalue);
             if (decimalvalue == "") return "";
-            else return Convert.ToString(Convert.ToInt16(decimalvalue), 2).PadLeft(8,'0');
+            else return Convert.ToString(Convert.ToInt16(decimalvalue), 2).PadLeft(8, '0');
         }
     }
 }

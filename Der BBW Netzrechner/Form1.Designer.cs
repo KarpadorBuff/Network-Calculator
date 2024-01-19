@@ -41,20 +41,40 @@
             netmask3 = new Label();
             netmask2 = new Label();
             netmask1 = new Label();
-            Subnet4 = new TextBox();
-            Subnet2 = new TextBox();
-            Subnet3 = new TextBox();
-            Subnet1 = new TextBox();
             label1 = new Label();
             hostamount = new TextBox();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             panel1 = new Panel();
-            panel2 = new Panel();
+            label17 = new Label();
+            Subnet4 = new Label();
+            label14 = new Label();
+            Subnet1 = new Label();
+            Subnet3 = new Label();
+            label13 = new Label();
+            Subnet2 = new Label();
+            NetzAddr4 = new Label();
+            NetzAddr3 = new Label();
+            NetzAddr2 = new Label();
+            NetzAddr1 = new Label();
+            ipBroadcast4 = new Label();
+            ipBroadcast3 = new Label();
+            ipBroadcast2 = new Label();
+            ipBroadcast1 = new Label();
+            pictureBox1 = new PictureBox();
             panel3 = new Panel();
             panel4 = new Panel();
+            label9 = new Label();
+            label10 = new Label();
+            netzaddresse1 = new Label();
+            netzaddresse2 = new Label();
+            netzaddresse3 = new Label();
+            netzaddresse4 = new Label();
+            broadcast1 = new Label();
+            broadcast2 = new Label();
+            broadcast3 = new Label();
+            broadcast4 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
@@ -63,7 +83,7 @@
             netmask_I3 = new Label();
             netmask_I4 = new Label();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -150,11 +170,11 @@
             // 
             // TBnetmask
             // 
-            TBnetmask.Location = new Point(161, 20);
+            TBnetmask.Location = new Point(135, 20);
             TBnetmask.MaxLength = 3;
             TBnetmask.Name = "TBnetmask";
             TBnetmask.Size = new Size(26, 23);
-            TBnetmask.TabIndex = 9;
+            TBnetmask.TabIndex = 5;
             TBnetmask.Text = "16";
             TBnetmask.TextAlign = HorizontalAlignment.Center;
             TBnetmask.TextChanged += netmaskDecimalChanged;
@@ -162,7 +182,8 @@
             // netmask4
             // 
             netmask4.AutoSize = true;
-            netmask4.Location = new Point(286, 32);
+            netmask4.ForeColor = Color.Green;
+            netmask4.Location = new Point(286, 62);
             netmask4.Name = "netmask4";
             netmask4.Size = new Size(55, 15);
             netmask4.TabIndex = 13;
@@ -172,7 +193,8 @@
             // netmask3
             // 
             netmask3.AutoSize = true;
-            netmask3.Location = new Point(226, 32);
+            netmask3.ForeColor = Color.Green;
+            netmask3.Location = new Point(226, 62);
             netmask3.Name = "netmask3";
             netmask3.Size = new Size(55, 15);
             netmask3.TabIndex = 12;
@@ -182,7 +204,8 @@
             // netmask2
             // 
             netmask2.AutoSize = true;
-            netmask2.Location = new Point(166, 32);
+            netmask2.ForeColor = Color.Green;
+            netmask2.Location = new Point(166, 62);
             netmask2.Name = "netmask2";
             netmask2.Size = new Size(55, 15);
             netmask2.TabIndex = 11;
@@ -192,63 +215,20 @@
             // netmask1
             // 
             netmask1.AutoSize = true;
-            netmask1.Location = new Point(106, 32);
+            netmask1.ForeColor = Color.Green;
+            netmask1.Location = new Point(106, 62);
             netmask1.Name = "netmask1";
             netmask1.Size = new Size(55, 15);
             netmask1.TabIndex = 10;
             netmask1.Text = "00000000";
             netmask1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Subnet4
-            // 
-            Subnet4.Location = new Point(108, 20);
-            Subnet4.MaxLength = 3;
-            Subnet4.Name = "Subnet4";
-            Subnet4.Size = new Size(26, 23);
-            Subnet4.TabIndex = 8;
-            Subnet4.Text = "0";
-            Subnet4.TextAlign = HorizontalAlignment.Center;
-            Subnet4.TextChanged += Any_text_changed;
-            // 
-            // Subnet2
-            // 
-            Subnet2.Location = new Point(44, 20);
-            Subnet2.MaxLength = 3;
-            Subnet2.Name = "Subnet2";
-            Subnet2.Size = new Size(26, 23);
-            Subnet2.TabIndex = 6;
-            Subnet2.Text = "255";
-            Subnet2.TextAlign = HorizontalAlignment.Center;
-            Subnet2.TextChanged += Any_text_changed;
-            // 
-            // Subnet3
-            // 
-            Subnet3.Location = new Point(76, 20);
-            Subnet3.MaxLength = 3;
-            Subnet3.Name = "Subnet3";
-            Subnet3.Size = new Size(26, 23);
-            Subnet3.TabIndex = 7;
-            Subnet3.Text = "0";
-            Subnet3.TextAlign = HorizontalAlignment.Center;
-            Subnet3.TextChanged += Any_text_changed;
-            // 
-            // Subnet1
-            // 
-            Subnet1.Location = new Point(12, 20);
-            Subnet1.MaxLength = 3;
-            Subnet1.Name = "Subnet1";
-            Subnet1.Size = new Size(26, 23);
-            Subnet1.TabIndex = 5;
-            Subnet1.Text = "255";
-            Subnet1.TextAlign = HorizontalAlignment.Center;
-            Subnet1.TextChanged += Any_text_changed;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(151, 22);
+            label1.Location = new Point(125, 22);
             label1.Name = "label1";
             label1.Size = new Size(14, 17);
             label1.TabIndex = 18;
@@ -261,20 +241,9 @@
             hostamount.Name = "hostamount";
             hostamount.Size = new Size(122, 23);
             hostamount.TabIndex = 19;
-            hostamount.Text = "Na/N";
+            hostamount.Text = "coming soon";
             hostamount.TextAlign = HorizontalAlignment.Center;
             hostamount.TextChanged += Any_text_changed;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(100, 17);
-            label2.TabIndex = 20;
-            label2.Text = "Subnetz Maske";
             // 
             // label3
             // 
@@ -311,41 +280,204 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label17);
+            panel1.Controls.Add(Subnet4);
+            panel1.Controls.Add(label14);
+            panel1.Controls.Add(Subnet1);
+            panel1.Controls.Add(Subnet3);
+            panel1.Controls.Add(label13);
+            panel1.Controls.Add(Subnet2);
+            panel1.Controls.Add(NetzAddr4);
+            panel1.Controls.Add(NetzAddr3);
+            panel1.Controls.Add(NetzAddr2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(NetzAddr1);
+            panel1.Controls.Add(TBnetmask);
+            panel1.Controls.Add(ipBroadcast4);
             panel1.Controls.Add(label3);
+            panel1.Controls.Add(ipBroadcast3);
             panel1.Controls.Add(TDecOct1);
             panel1.Controls.Add(TDecOct3);
+            panel1.Controls.Add(ipBroadcast2);
             panel1.Controls.Add(TDecOct2);
             panel1.Controls.Add(TDecOct4);
+            panel1.Controls.Add(ipBroadcast1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 98);
+            panel1.Size = new Size(355, 157);
             panel1.TabIndex = 24;
             // 
-            // panel2
+            // label17
             // 
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(Subnet1);
-            panel2.Controls.Add(Subnet3);
-            panel2.Controls.Add(Subnet2);
-            panel2.Controls.Add(Subnet4);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(TBnetmask);
-            panel2.Location = new Point(12, 116);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(250, 49);
-            panel2.TabIndex = 25;
+            label17.AutoSize = true;
+            label17.Location = new Point(12, 57);
+            label17.Name = "label17";
+            label17.Size = new Size(86, 15);
+            label17.TabIndex = 45;
+            label17.Text = "Subnetz Maske";
+            // 
+            // Subnet4
+            // 
+            Subnet4.AutoSize = true;
+            Subnet4.Location = new Point(190, 57);
+            Subnet4.Name = "Subnet4";
+            Subnet4.Size = new Size(25, 15);
+            Subnet4.TabIndex = 44;
+            Subnet4.Text = "255";
+            Subnet4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(12, 105);
+            label14.Name = "label14";
+            label14.Size = new Size(58, 15);
+            label14.TabIndex = 31;
+            label14.Text = "Netzaddr.";
+            // 
+            // Subnet1
+            // 
+            Subnet1.AutoSize = true;
+            Subnet1.Location = new Point(109, 57);
+            Subnet1.Name = "Subnet1";
+            Subnet1.Size = new Size(25, 15);
+            Subnet1.TabIndex = 41;
+            Subnet1.Text = "255";
+            Subnet1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Subnet3
+            // 
+            Subnet3.AutoSize = true;
+            Subnet3.Location = new Point(163, 57);
+            Subnet3.Name = "Subnet3";
+            Subnet3.Size = new Size(25, 15);
+            Subnet3.TabIndex = 43;
+            Subnet3.Text = "255";
+            Subnet3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(12, 81);
+            label13.Name = "label13";
+            label13.Size = new Size(59, 15);
+            label13.TabIndex = 30;
+            label13.Text = "Broadcast";
+            // 
+            // Subnet2
+            // 
+            Subnet2.AutoSize = true;
+            Subnet2.Location = new Point(136, 57);
+            Subnet2.Name = "Subnet2";
+            Subnet2.Size = new Size(25, 15);
+            Subnet2.TabIndex = 42;
+            Subnet2.Text = "255";
+            Subnet2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // NetzAddr4
+            // 
+            NetzAddr4.AutoSize = true;
+            NetzAddr4.Location = new Point(190, 105);
+            NetzAddr4.Name = "NetzAddr4";
+            NetzAddr4.Size = new Size(25, 15);
+            NetzAddr4.TabIndex = 29;
+            NetzAddr4.Text = "255";
+            // 
+            // NetzAddr3
+            // 
+            NetzAddr3.AutoSize = true;
+            NetzAddr3.Location = new Point(163, 105);
+            NetzAddr3.Name = "NetzAddr3";
+            NetzAddr3.Size = new Size(25, 15);
+            NetzAddr3.TabIndex = 28;
+            NetzAddr3.Text = "255";
+            // 
+            // NetzAddr2
+            // 
+            NetzAddr2.AutoSize = true;
+            NetzAddr2.Location = new Point(136, 105);
+            NetzAddr2.Name = "NetzAddr2";
+            NetzAddr2.Size = new Size(25, 15);
+            NetzAddr2.TabIndex = 27;
+            NetzAddr2.Text = "255";
+            // 
+            // NetzAddr1
+            // 
+            NetzAddr1.AutoSize = true;
+            NetzAddr1.Location = new Point(109, 105);
+            NetzAddr1.Name = "NetzAddr1";
+            NetzAddr1.Size = new Size(25, 15);
+            NetzAddr1.TabIndex = 26;
+            NetzAddr1.Text = "255";
+            // 
+            // ipBroadcast4
+            // 
+            ipBroadcast4.AutoSize = true;
+            ipBroadcast4.Location = new Point(190, 81);
+            ipBroadcast4.Name = "ipBroadcast4";
+            ipBroadcast4.Size = new Size(25, 15);
+            ipBroadcast4.TabIndex = 25;
+            ipBroadcast4.Text = "255";
+            // 
+            // ipBroadcast3
+            // 
+            ipBroadcast3.AutoSize = true;
+            ipBroadcast3.Location = new Point(163, 81);
+            ipBroadcast3.Name = "ipBroadcast3";
+            ipBroadcast3.Size = new Size(25, 15);
+            ipBroadcast3.TabIndex = 24;
+            ipBroadcast3.Text = "255";
+            // 
+            // ipBroadcast2
+            // 
+            ipBroadcast2.AutoSize = true;
+            ipBroadcast2.Location = new Point(136, 81);
+            ipBroadcast2.Name = "ipBroadcast2";
+            ipBroadcast2.Size = new Size(25, 15);
+            ipBroadcast2.TabIndex = 23;
+            ipBroadcast2.Text = "255";
+            // 
+            // ipBroadcast1
+            // 
+            ipBroadcast1.AutoSize = true;
+            ipBroadcast1.Location = new Point(109, 81);
+            ipBroadcast1.Name = "ipBroadcast1";
+            ipBroadcast1.Size = new Size(25, 15);
+            ipBroadcast1.TabIndex = 22;
+            ipBroadcast1.Text = "255";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.banana_happy;
+            pictureBox1.InitialImage = null;
+            pictureBox1.Location = new Point(356, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 28;
+            pictureBox1.TabStop = false;
             // 
             // panel3
             // 
             panel3.Controls.Add(label4);
             panel3.Controls.Add(hostamount);
-            panel3.Location = new Point(12, 165);
+            panel3.Location = new Point(12, 175);
             panel3.Name = "panel3";
-            panel3.Size = new Size(250, 49);
+            panel3.Size = new Size(355, 49);
             panel3.TabIndex = 26;
             // 
             // panel4
             // 
+            panel4.Controls.Add(label9);
+            panel4.Controls.Add(label10);
+            panel4.Controls.Add(netzaddresse1);
+            panel4.Controls.Add(netzaddresse2);
+            panel4.Controls.Add(netzaddresse3);
+            panel4.Controls.Add(netzaddresse4);
+            panel4.Controls.Add(broadcast1);
+            panel4.Controls.Add(broadcast2);
+            panel4.Controls.Add(broadcast3);
+            panel4.Controls.Add(broadcast4);
             panel4.Controls.Add(label8);
             panel4.Controls.Add(label7);
             panel4.Controls.Add(label6);
@@ -362,17 +494,130 @@
             panel4.Controls.Add(LBinOct1);
             panel4.Controls.Add(LBinOct3);
             panel4.Controls.Add(LBinOct2);
-            panel4.Location = new Point(12, 214);
+            panel4.Location = new Point(12, 230);
             panel4.Name = "panel4";
-            panel4.Size = new Size(355, 73);
+            panel4.Size = new Size(355, 138);
             panel4.TabIndex = 27;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.Maroon;
+            label9.Location = new Point(12, 47);
+            label9.Name = "label9";
+            label9.Size = new Size(71, 15);
+            label9.TabIndex = 40;
+            label9.Text = "Netzadresse";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.DarkCyan;
+            label10.Location = new Point(12, 32);
+            label10.Name = "label10";
+            label10.Size = new Size(59, 15);
+            label10.TabIndex = 39;
+            label10.Text = "Broadcast";
+            // 
+            // netzaddresse1
+            // 
+            netzaddresse1.AutoSize = true;
+            netzaddresse1.ForeColor = Color.Maroon;
+            netzaddresse1.Location = new Point(106, 47);
+            netzaddresse1.Name = "netzaddresse1";
+            netzaddresse1.Size = new Size(55, 15);
+            netzaddresse1.TabIndex = 35;
+            netzaddresse1.Text = "00000000";
+            netzaddresse1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // netzaddresse2
+            // 
+            netzaddresse2.AutoSize = true;
+            netzaddresse2.ForeColor = Color.Maroon;
+            netzaddresse2.Location = new Point(166, 47);
+            netzaddresse2.Name = "netzaddresse2";
+            netzaddresse2.Size = new Size(55, 15);
+            netzaddresse2.TabIndex = 36;
+            netzaddresse2.Text = "00000000";
+            netzaddresse2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // netzaddresse3
+            // 
+            netzaddresse3.AutoSize = true;
+            netzaddresse3.ForeColor = Color.Maroon;
+            netzaddresse3.Location = new Point(226, 47);
+            netzaddresse3.Name = "netzaddresse3";
+            netzaddresse3.Size = new Size(55, 15);
+            netzaddresse3.TabIndex = 37;
+            netzaddresse3.Text = "00000000";
+            netzaddresse3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // netzaddresse4
+            // 
+            netzaddresse4.AutoSize = true;
+            netzaddresse4.ForeColor = Color.Maroon;
+            netzaddresse4.Location = new Point(286, 47);
+            netzaddresse4.Name = "netzaddresse4";
+            netzaddresse4.Size = new Size(55, 15);
+            netzaddresse4.TabIndex = 38;
+            netzaddresse4.Text = "00000000";
+            netzaddresse4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // broadcast1
+            // 
+            broadcast1.AutoSize = true;
+            broadcast1.ForeColor = Color.DarkCyan;
+            broadcast1.Location = new Point(106, 32);
+            broadcast1.Name = "broadcast1";
+            broadcast1.Size = new Size(55, 15);
+            broadcast1.TabIndex = 31;
+            broadcast1.Text = "00000000";
+            broadcast1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // broadcast2
+            // 
+            broadcast2.AutoSize = true;
+            broadcast2.ForeColor = Color.DarkCyan;
+            broadcast2.Location = new Point(166, 32);
+            broadcast2.Name = "broadcast2";
+            broadcast2.Size = new Size(55, 15);
+            broadcast2.TabIndex = 32;
+            broadcast2.Text = "00000000";
+            broadcast2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // broadcast3
+            // 
+            broadcast3.AutoSize = true;
+            broadcast3.ForeColor = Color.DarkCyan;
+            broadcast3.Location = new Point(226, 32);
+            broadcast3.Name = "broadcast3";
+            broadcast3.Size = new Size(55, 15);
+            broadcast3.TabIndex = 33;
+            broadcast3.Text = "00000000";
+            broadcast3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // broadcast4
+            // 
+            broadcast4.AutoSize = true;
+            broadcast4.ForeColor = Color.DarkCyan;
+            broadcast4.Location = new Point(286, 32);
+            broadcast4.Name = "broadcast4";
+            broadcast4.Size = new Size(55, 15);
+            broadcast4.TabIndex = 34;
+            broadcast4.Text = "00000000";
+            broadcast4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(12, 47);
+            label8.ForeColor = Color.Red;
+            label8.Location = new Point(12, 77);
             label8.Name = "label8";
             label8.Size = new Size(55, 15);
             label8.TabIndex = 30;
@@ -383,7 +628,8 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(12, 32);
+            label7.ForeColor = Color.Green;
+            label7.Location = new Point(12, 62);
             label7.Name = "label7";
             label7.Size = new Size(88, 15);
             label7.TabIndex = 29;
@@ -403,7 +649,8 @@
             // netmask_I1
             // 
             netmask_I1.AutoSize = true;
-            netmask_I1.Location = new Point(106, 47);
+            netmask_I1.ForeColor = Color.Red;
+            netmask_I1.Location = new Point(106, 77);
             netmask_I1.Name = "netmask_I1";
             netmask_I1.Size = new Size(55, 15);
             netmask_I1.TabIndex = 24;
@@ -413,7 +660,8 @@
             // netmask_I2
             // 
             netmask_I2.AutoSize = true;
-            netmask_I2.Location = new Point(166, 47);
+            netmask_I2.ForeColor = Color.Red;
+            netmask_I2.Location = new Point(166, 77);
             netmask_I2.Name = "netmask_I2";
             netmask_I2.Size = new Size(55, 15);
             netmask_I2.TabIndex = 25;
@@ -423,7 +671,8 @@
             // netmask_I3
             // 
             netmask_I3.AutoSize = true;
-            netmask_I3.Location = new Point(226, 47);
+            netmask_I3.ForeColor = Color.Red;
+            netmask_I3.Location = new Point(226, 77);
             netmask_I3.Name = "netmask_I3";
             netmask_I3.Size = new Size(55, 15);
             netmask_I3.TabIndex = 26;
@@ -433,7 +682,8 @@
             // netmask_I4
             // 
             netmask_I4.AutoSize = true;
-            netmask_I4.Location = new Point(286, 47);
+            netmask_I4.ForeColor = Color.Red;
+            netmask_I4.Location = new Point(286, 77);
             netmask_I4.Name = "netmask_I4";
             netmask_I4.Size = new Size(55, 15);
             netmask_I4.TabIndex = 27;
@@ -444,18 +694,17 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(372, 433);
+            ClientSize = new Size(455, 462);
+            Controls.Add(pictureBox1);
             Controls.Add(panel4);
             Controls.Add(panel3);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Netzrechner";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
@@ -476,18 +725,12 @@
         private Label netmask4;
         private Label netmask3;
         private Label netmask2;
-        private TextBox Subnet4;
-        private TextBox Subnet2;
-        private TextBox Subnet3;
-        private TextBox Subnet1;
         private Label label1;
         private TextBox hostamount;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Panel panel1;
-        private Panel panel2;
         private Panel panel3;
         private Panel panel4;
         private Label label8;
@@ -498,5 +741,31 @@
         private Label netmask_I3;
         private Label netmask_I4;
         public Label netmask1;
+        private Label NetzAddr4;
+        private Label NetzAddr3;
+        private Label NetzAddr2;
+        private Label NetzAddr1;
+        private Label ipBroadcast4;
+        private Label ipBroadcast3;
+        private Label ipBroadcast2;
+        private Label ipBroadcast1;
+        private Label label14;
+        private Label label13;
+        private Label label9;
+        private Label label10;
+        private Label netzaddresse1;
+        private Label netzaddresse2;
+        private Label netzaddresse3;
+        private Label netzaddresse4;
+        public Label broadcast1;
+        private Label broadcast2;
+        private Label broadcast3;
+        private Label broadcast4;
+        private Label label17;
+        private Label Subnet4;
+        private Label Subnet1;
+        private Label Subnet3;
+        private Label Subnet2;
+        private PictureBox pictureBox1;
     }
 }

@@ -9,13 +9,14 @@ namespace Der_BBW_Netzrechner
 {
     internal class MyIPAddress
     {
-        int[]       dec;
-        string[]    bin;
+        int[]       ip_Decimal;
+        string[]    ip_Binary;
+
         public int netmask_decimal = 16;
         public MyIPAddress(int[] ipDecimal) 
         { 
-            dec = new int[4];
-            bin = new string[4];
+            this.ip_Decimal = new int[4];
+            ip_Binary = new string[4];
             setIPDecimal(ipDecimal);
             
         }
@@ -23,10 +24,10 @@ namespace Der_BBW_Netzrechner
         {
             if (arr.Length == 4)
             {
-                 dec[0] = arr[0];
-                 dec[1] = arr[1];
-                 dec[2] = arr[2];
-                 dec[3] = arr[3];
+                 ip_Decimal[0] = arr[0];
+                 ip_Decimal[1] = arr[1];
+                 ip_Decimal[2] = arr[2];
+                 ip_Decimal[3] = arr[3];
             }            
             calcBinaryfromDecimal();
         }
@@ -37,18 +38,18 @@ namespace Der_BBW_Netzrechner
             {
                 //Debug.WriteLine(i);
             }
-            bin[0] = Methods.StringToBinary(arr[0].ToString()).PadRight(8, '0');
-            bin[1] = Methods.StringToBinary(arr[1].ToString()).PadRight(8, '0');
-            bin[2] = Methods.StringToBinary(arr[2].ToString()).PadRight(8, '0');
-            bin[3] = Methods.StringToBinary(arr[3].ToString()).PadRight(8, '0');
+            ip_Binary[0] = Methods.StringToBinary(arr[0].ToString()).PadRight(8, '0');
+            ip_Binary[1] = Methods.StringToBinary(arr[1].ToString()).PadRight(8, '0');
+            ip_Binary[2] = Methods.StringToBinary(arr[2].ToString()).PadRight(8, '0');
+            ip_Binary[3] = Methods.StringToBinary(arr[3].ToString()).PadRight(8, '0');
         }
         public int[] getIpDecimal()
         {
-            return dec;
+            return ip_Decimal;
         }
         public string[] getIpBinary() 
         {
-            return bin;
+            return ip_Binary;
         }
         public string[] getSubnetmaskBinary()
         {
@@ -87,11 +88,57 @@ namespace Der_BBW_Netzrechner
                 
                 for (int l = 0; l <= getSubnetmaskBinary()[i].Length-1; l++)
                 {
-                    Debug.Write(getSubnetmaskBinary()[i][l] + "-->" + newstring + "\n");
+                    //Debug.Write(getSubnetmaskBinary()[i][l] + "-->" + newstring + "\n");
                     if (getSubnetmaskBinary()[i][l] == '1')newstring += "0";
                     else newstring += "1";
                 }
                 ret[i] = newstring;
+            }
+            return ret;
+        }
+        public string[] getBroadcast_Binary()
+        {
+            string[] ret = new string[]{"", "", "", "" };
+            int netmaskremainder = netmask_decimal;
+            for (int i = 0; i < 4; i++)
+            {
+                if(netmaskremainder > 8)
+                {
+                    ret[i] = getIpBinary()[i];
+                    netmaskremainder -= 8;
+                }
+                else
+                {
+                    for (int j = 0; j < netmaskremainder; j++)
+                    {
+                        ret[i] += getIpBinary()[i][j];
+                    }
+                    netmaskremainder = 0;
+                    ret[i] = ret[i].PadRight(8, '1');
+                }
+            }
+            return ret;
+        }
+        public string[] getNetaddress_Binary()
+        {
+            string[] ret = new string[] { "", "", "", "" };
+            int netmaskremainder = netmask_decimal;
+            for (int i = 0; i < 4; i++)
+            {
+                if (netmaskremainder > 8)
+                {
+                    ret[i] = getIpBinary()[i];
+                    netmaskremainder -= 8;
+                }
+                else
+                {
+                    for (int j = 0; j < netmaskremainder; j++)
+                    {
+                        ret[i] += getIpBinary()[i][j];
+                    }
+                    netmaskremainder = 0;
+                    ret[i] = ret[i].PadRight(8, '0');
+                }
             }
             return ret;
         }
