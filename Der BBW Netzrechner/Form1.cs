@@ -22,51 +22,6 @@ namespace Der_BBW_Netzrechner
             pbarray[0] = pictureBox1;
         }
 
-        private void UpdateAll()
-        {
-            address.netmask_decimal = Methods.StringToInt(TBnetmask.Text);
-            address.setIPDecimal(
-                new int[] {
-                Methods.StringToInt(TDecOct1.Text),
-                Methods.StringToInt(TDecOct2.Text),
-                Methods.StringToInt(TDecOct3.Text),
-                Methods.StringToInt(TDecOct4.Text)});
-
-            //variables
-            int[] arrayDecimal = address.getIpDecimal();
-            string[] arrayBinary = address.getIpBinary();
-            string[] subnetBinary = address.getSubnetmaskBinary();
-
-            //debug msgs
-            Debug.Write("current IP: ");
-            for (int i = 0; i < arrayDecimal.Length; i++)
-            {
-                Debug.Write(arrayDecimal[i]);
-                if (i != 3)
-                {
-                    Debug.Write('.');
-                }
-            }
-            Debug.Write('\n');
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            string[] arr;
-            int i = Methods.StringToInt(TBnetmask.Text);
-            // input Maximaler Wert prüfen
-            if (i > 32) address.netmask_decimal = 32;
-            else if (i < 0) address.netmask_decimal = 0;
-            else address.netmask_decimal = i;
-            Debug.WriteLine(address.netmask_decimal);
-            arr = address.getSubnetmaskBinary();
-            netmask1.Text = arr[0];
-            netmask2.Text = arr[1];
-            netmask3.Text = arr[2];
-            netmask4.Text = arr[3];
-
-        }
-
         private void Any_text_changed(object sender, EventArgs e)
         {
 
