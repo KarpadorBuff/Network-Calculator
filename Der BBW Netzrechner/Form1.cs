@@ -21,25 +21,15 @@ namespace Der_BBW_Netzrechner
             TDecOct2.Text = baseIP[1].ToString();
             TDecOct3.Text = baseIP[2].ToString();
             TDecOct4.Text = baseIP[3].ToString();
-            for (int i = 1; i < 32; i++)
-            {
-                Thread.Sleep(1);
-                PictureBox p = new()
-                {
-                    Location = new Point(15 * i, 400),
-                    Size = new Size(15, 15),
-                    SizeMode = PictureBoxSizeMode.StretchImage,
-                    Visible = true,
-                    Enabled = true,
-                    Image = Resources.banana_happy
-                };
-                pbarray[i] = p;
-                this.Controls.Add(p);
-                p.Show();
-            }
-            
+            pbarray[0] = pictureBox1;
         }
-        private void on_any_change(object sender, EventArgs e)
+
+        private void Any_text_changed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Decimal_Text_Changed(object sender, EventArgs e)
         {
             address.setIPDecimal(
                 new int[] {
