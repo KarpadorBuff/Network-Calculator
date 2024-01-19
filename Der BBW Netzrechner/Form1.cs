@@ -21,7 +21,7 @@ namespace Der_BBW_Netzrechner
             TDecOct2.Text = baseIP[1].ToString();
             TDecOct3.Text = baseIP[2].ToString();
             TDecOct4.Text = baseIP[3].ToString();
-            for (int i = 0; i < 32; i++)
+            for (int i = 0; i <= 32; i++)
             {
                 PictureBox pb = new()
                 {
