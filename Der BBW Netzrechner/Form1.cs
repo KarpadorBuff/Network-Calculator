@@ -1,3 +1,4 @@
+using Der_BBW_Netzrechner.Properties;
 using System.Diagnostics;
 
 namespace Der_BBW_Netzrechner
@@ -8,6 +9,7 @@ namespace Der_BBW_Netzrechner
         {
             InitializeComponent();
         }
+        private int EasterEgg_clicks_to_activation = 10;
         MyIPAddress address;
         private readonly int[] baseIP = { 192, 168, 0, 0 };
         private PictureBox[] pbarray = new PictureBox[32];
@@ -19,60 +21,25 @@ namespace Der_BBW_Netzrechner
             TDecOct2.Text = baseIP[1].ToString();
             TDecOct3.Text = baseIP[2].ToString();
             TDecOct4.Text = baseIP[3].ToString();
-            pbarray[0] = pictureBox1;
-        }
-
-        private void UpdateAll()
-        {
-            address.netmask_decimal = Methods.StringToInt(TBnetmask.Text);
-            address.setIPDecimal(
-                new int[] {
-                Methods.StringToInt(TDecOct1.Text),
-                Methods.StringToInt(TDecOct2.Text),
-                Methods.StringToInt(TDecOct3.Text),
-                Methods.StringToInt(TDecOct4.Text)});
-
-            //variables
-            int[] arrayDecimal = address.getIpDecimal();
-            string[] arrayBinary = address.getIpBinary();
-            string[] subnetBinary = address.getSubnetmaskBinary();
-
-            //debug msgs
-            Debug.Write("current IP: ");
-            for (int i = 0; i < arrayDecimal.Length; i++)
+            for (int i = 1; i < 32; i++)
             {
-                Debug.Write(arrayDecimal[i]);
-                if (i != 3)
+                Thread.Sleep(1);
+                PictureBox p = new()
                 {
-                    Debug.Write('.');
-                }
+                    Location = new Point(15 * i, 400),
+                    Size = new Size(15, 15),
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Visible = true,
+                    Enabled = true,
+                    Image = Resources.banana_happy
+                };
+                pbarray[i] = p;
+                this.Controls.Add(p);
+                p.Show();
             }
-            Debug.Write('\n');
+            
         }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            string[] arr;
-            int i = Methods.StringToInt(TBnetmask.Text);
-            // input Maximaler Wert prüfen
-            if (i > 32) address.netmask_decimal = 32;
-            else if (i < 0) address.netmask_decimal = 0;
-            else address.netmask_decimal = i;
-            Debug.WriteLine(address.netmask_decimal);
-            arr = address.getSubnetmaskBinary();
-            netmask1.Text = arr[0];
-            netmask2.Text = arr[1];
-            netmask3.Text = arr[2];
-            netmask4.Text = arr[3];
-
-        }
-
-        private void Any_text_changed(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Decimal_Text_Changed(object sender, EventArgs e)
+        private void on_any_change(object sender, EventArgs e)
         {
             address.setIPDecimal(
                 new int[] {
@@ -86,10 +53,7 @@ namespace Der_BBW_Netzrechner
             LBinOct2.Text = address.getIpBinary()[1];
             LBinOct3.Text = address.getIpBinary()[2];
             LBinOct4.Text = address.getIpBinary()[3];
-        }
 
-        private void netmaskDecimalChanged(object sender, EventArgs e)
-        {
             address.netmask_decimal = Methods.StringToInt(TBnetmask.Text);
             Subnet1.Text = address.getSubnetmaskDecimal()[0].ToString();
             Subnet2.Text = address.getSubnetmaskDecimal()[1].ToString();
@@ -115,7 +79,17 @@ namespace Der_BBW_Netzrechner
             netzaddresse2.Text = address.getNetaddress_Binary()[1];
             netzaddresse3.Text = address.getNetaddress_Binary()[2];
             netzaddresse4.Text = address.getNetaddress_Binary()[3];
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (EasterEgg_clicks_to_activation == 0)
+            {
+                this.Size = new Size(this.Width, this.Height + 200);
+                
+            }
+            EasterEgg_clicks_to_activation--;
+            
         }
     }
 }

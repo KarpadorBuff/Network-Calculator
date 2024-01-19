@@ -96,7 +96,7 @@
             TDecOct1.Size = new Size(26, 23);
             TDecOct1.TabIndex = 1;
             TDecOct1.TextAlign = HorizontalAlignment.Center;
-            TDecOct1.TextChanged += Decimal_Text_Changed;
+            TDecOct1.TextChanged += on_any_change;
             // 
             // LBinOct1
             // 
@@ -116,7 +116,7 @@
             TDecOct3.Size = new Size(26, 23);
             TDecOct3.TabIndex = 3;
             TDecOct3.TextAlign = HorizontalAlignment.Center;
-            TDecOct3.TextChanged += Decimal_Text_Changed;
+            TDecOct3.TextChanged += on_any_change;
             // 
             // TDecOct2
             // 
@@ -126,7 +126,7 @@
             TDecOct2.Size = new Size(26, 23);
             TDecOct2.TabIndex = 2;
             TDecOct2.TextAlign = HorizontalAlignment.Center;
-            TDecOct2.TextChanged += Decimal_Text_Changed;
+            TDecOct2.TextChanged += on_any_change;
             // 
             // TDecOct4
             // 
@@ -136,7 +136,7 @@
             TDecOct4.Size = new Size(26, 23);
             TDecOct4.TabIndex = 4;
             TDecOct4.TextAlign = HorizontalAlignment.Center;
-            TDecOct4.TextChanged += Decimal_Text_Changed;
+            TDecOct4.TextChanged += on_any_change;
             // 
             // LBinOct2
             // 
@@ -177,7 +177,7 @@
             TBnetmask.TabIndex = 5;
             TBnetmask.Text = "16";
             TBnetmask.TextAlign = HorizontalAlignment.Center;
-            TBnetmask.TextChanged += netmaskDecimalChanged;
+            TBnetmask.TextChanged += on_any_change;
             // 
             // netmask4
             // 
@@ -243,7 +243,7 @@
             hostamount.TabIndex = 19;
             hostamount.Text = "coming soon";
             hostamount.TextAlign = HorizontalAlignment.Center;
-            hostamount.TextChanged += Any_text_changed;
+            hostamount.TextChanged += on_any_change;
             // 
             // label3
             // 
@@ -450,12 +450,13 @@
             // 
             pictureBox1.Image = Properties.Resources.banana_happy;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(356, 0);
+            pictureBox1.Location = new Point(384, -2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel3
             // 
@@ -694,7 +695,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(455, 462);
+            ClientSize = new Size(484, 561);
             Controls.Add(pictureBox1);
             Controls.Add(panel4);
             Controls.Add(panel3);
