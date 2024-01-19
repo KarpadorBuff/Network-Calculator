@@ -16,23 +16,44 @@ namespace Der_BBW_Netzrechner
         private void Form1_Load(object sender, EventArgs e)
         {
             address = new MyIPAddress(baseIP);
-            for (int i = 0; i < 32; i++)
+            for (int i = 0; i < 4; i++)
             {
-                PictureBox pb = new()
+                for (int y = 8 * i; y < 8 + 8 * i; y++)
                 {
-                    Image = Resources.banana_happy,
-                    Visible = true,
-                    Enabled = true,
-                    Size = new Size(15, 15),
-                    Location = new Point(15 * i, 500),
-                    SizeMode = PictureBoxSizeMode.StretchImage
-                };
-                this.Controls.Add(pb);
-                pb.Show();
-                pb.Update();
-                pbarray[i] = pb;
-                Thread.Sleep(0);
+                    PictureBox pb = new()
+                    {
+                        Image = Resources.banana_happy,
+                        Visible = true,
+                        Enabled = true,
+                        Size = new Size(15, 15),
+                        Location = new Point(15 * y + i * 10, 500),
+                        SizeMode = PictureBoxSizeMode.StretchImage
+
+                    };
+                    this.Controls.Add(pb);
+                    pb.Show();
+                    pb.Update();
+                    pbarray[y] = pb;
+                    Thread.Sleep(0);
+                }
             }
+            //for (int i = 0; i < 32; i++)
+            //{
+            //    PictureBox pb = new()
+            //    {
+            //        Image = Resources.banana_happy,
+            //        Visible = true,
+            //        Enabled = true,
+            //        Size = new Size(15, 15),
+            //        Location = new Point(15 * i + 10*i, 500),
+            //        SizeMode = PictureBoxSizeMode.StretchImage
+            //    };
+            //    this.Controls.Add(pb);
+            //    pb.Show();
+            //    pb.Update();
+            //    pbarray[i] = pb;
+            //    Thread.Sleep(0);
+            //}
             //Fill Decimal values from address values
             TDecOct1.Text = baseIP[0].ToString();
             TDecOct2.Text = baseIP[1].ToString();
