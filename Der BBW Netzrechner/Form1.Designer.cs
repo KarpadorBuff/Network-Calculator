@@ -96,7 +96,7 @@
             TDecOct1.Size = new Size(26, 23);
             TDecOct1.TabIndex = 1;
             TDecOct1.TextAlign = HorizontalAlignment.Center;
-            TDecOct1.TextChanged += on_any_change;
+            TDecOct1.TextChanged += Decimal_Text_Changed;
             // 
             // LBinOct1
             // 
@@ -116,7 +116,7 @@
             TDecOct3.Size = new Size(26, 23);
             TDecOct3.TabIndex = 3;
             TDecOct3.TextAlign = HorizontalAlignment.Center;
-            TDecOct3.TextChanged += on_any_change;
+            TDecOct3.TextChanged += Decimal_Text_Changed;
             // 
             // TDecOct2
             // 
@@ -126,7 +126,7 @@
             TDecOct2.Size = new Size(26, 23);
             TDecOct2.TabIndex = 2;
             TDecOct2.TextAlign = HorizontalAlignment.Center;
-            TDecOct2.TextChanged += on_any_change;
+            TDecOct2.TextChanged += Decimal_Text_Changed;
             // 
             // TDecOct4
             // 
@@ -136,7 +136,7 @@
             TDecOct4.Size = new Size(26, 23);
             TDecOct4.TabIndex = 4;
             TDecOct4.TextAlign = HorizontalAlignment.Center;
-            TDecOct4.TextChanged += on_any_change;
+            TDecOct4.TextChanged += Decimal_Text_Changed;
             // 
             // LBinOct2
             // 
@@ -177,7 +177,7 @@
             TBnetmask.TabIndex = 5;
             TBnetmask.Text = "16";
             TBnetmask.TextAlign = HorizontalAlignment.Center;
-            TBnetmask.TextChanged += on_any_change;
+            TBnetmask.TextChanged += Decimal_Text_Changed;
             // 
             // netmask4
             // 
@@ -243,7 +243,7 @@
             hostamount.TabIndex = 19;
             hostamount.Text = "coming soon";
             hostamount.TextAlign = HorizontalAlignment.Center;
-            hostamount.TextChanged += on_any_change;
+            hostamount.TextChanged += Decimal_Text_Changed;
             // 
             // label3
             // 
