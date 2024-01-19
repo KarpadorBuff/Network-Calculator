@@ -53,9 +53,19 @@ namespace Der_BBW_Netzrechner
         }
         public bool[] getIpBinary(string[] stringarray)
         {
-            bool[] a = new bool[stringarray.Length];
+            string bin32 = "";
+            bool[] ret = new bool[32];
+            for (int i = 0; i < 4; i++)
+            {
+                bin32 += stringarray[i];
+            }
+            for (int i = 0; i < 32; i++)
+            {
+                if(bin32[i] == '1') ret[i] = true;
+                else ret[i] = false;
+            }
 
-            return a;
+            return ret;
         }
 
         public string[] getSubnetmaskBinary()

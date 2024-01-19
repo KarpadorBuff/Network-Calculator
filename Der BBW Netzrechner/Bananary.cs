@@ -8,12 +8,12 @@ namespace Der_BBW_Netzrechner
 {
     internal class Bananary
     {
-        public static void BinaryToBananary(Boolean[]ipadresse)
+        public static void BinaryToBananary(bool[] ipadresse, PictureBox[] pbarray)
         {
-            PictureBox[] banana = new PictureBox[32];
+            
             for (int i = 0; i < 32; i++) 
             {
-                banana[i].Visible = ipadresse[i];
+                pbarray[i].Enabled = ipadresse[i];
             }
         }
     }
