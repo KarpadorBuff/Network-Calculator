@@ -9,12 +9,10 @@ namespace Der_BBW_Netzrechner
             InitializeComponent();
         }
         private int EasterEgg_clicks_to_activation = 1;
-        MyIPAddress address;
-        private readonly int[] baseIP = { 192, 168, 0, 0 };
-        private PictureBox[] pbarray = new PictureBox[32];
+        readonly MyIPAddress address = new(new int[] {1,2,3,4});
+        private readonly PictureBox[] pbarray = new PictureBox[32];
         private void Form1_Load(object sender, EventArgs e)
         {
-            address = new MyIPAddress(baseIP);
             for (int i = 0; i < 4; i++)
             {
                 for (int y = 8 * i; y < 8 + 8 * i; y++)
@@ -54,57 +52,57 @@ namespace Der_BBW_Netzrechner
             //    Thread.Sleep(0);
             //}
             //Fill Decimal values from address values
-            TDecOct1.Text = baseIP[0].ToString();
-            TDecOct2.Text = baseIP[1].ToString();
-            TDecOct3.Text = baseIP[2].ToString();
-            TDecOct4.Text = baseIP[3].ToString();
+            TDecOct1.Text = address.GetIpDecimal()[0].ToString();
+            TDecOct2.Text = address.GetIpDecimal()[1].ToString();
+            TDecOct3.Text = address.GetIpDecimal()[2].ToString();
+            TDecOct4.Text = address.GetIpDecimal()[3].ToString();
         }
 
         private void Decimal_Text_Changed(object sender, EventArgs e)
         {
-            address.setIPDecimal(
+            address.SetIPDecimal(
                 new int[] {
                 Methods.StringToInt(TDecOct1.Text),
                 Methods.StringToInt(TDecOct2.Text),
                 Methods.StringToInt(TDecOct3.Text),
-                Methods.StringToInt(TDecOct4.Text)});
-
+                Methods.StringToInt(TDecOct4.Text)
+                });
             //Fill Binary values from address values
-            LBinOct1.Text = address.getIpBinary()[0];
-            LBinOct2.Text = address.getIpBinary()[1];
-            LBinOct3.Text = address.getIpBinary()[2];
-            LBinOct4.Text = address.getIpBinary()[3];
+            LBinOct1.Text = address.GetIpBinary()[0];
+            LBinOct2.Text = address.GetIpBinary()[1];
+            LBinOct3.Text = address.GetIpBinary()[2];
+            LBinOct4.Text = address.GetIpBinary()[3];
 
             address.netmask_decimal = Methods.StringToInt(TBnetmask.Text);
-            Subnet1.Text = address.getSubnetmaskDecimal()[0].ToString();
-            Subnet2.Text = address.getSubnetmaskDecimal()[1].ToString();
-            Subnet3.Text = address.getSubnetmaskDecimal()[2].ToString();
-            Subnet4.Text = address.getSubnetmaskDecimal()[3].ToString();
+            Subnet1.Text = address.GetSubnetmaskDecimal()[0].ToString();
+            Subnet2.Text = address.GetSubnetmaskDecimal()[1].ToString();
+            Subnet3.Text = address.GetSubnetmaskDecimal()[2].ToString();
+            Subnet4.Text = address.GetSubnetmaskDecimal()[3].ToString();
 
-            netmask1.Text = address.getSubnetmaskBinary()[0].ToString();
-            netmask2.Text = address.getSubnetmaskBinary()[1].ToString();
-            netmask3.Text = address.getSubnetmaskBinary()[2].ToString();
-            netmask4.Text = address.getSubnetmaskBinary()[3].ToString();
+            netmask1.Text = address.GetSubnetmaskBinary()[0].ToString();
+            netmask2.Text = address.GetSubnetmaskBinary()[1].ToString();
+            netmask3.Text = address.GetSubnetmaskBinary()[2].ToString();
+            netmask4.Text = address.GetSubnetmaskBinary()[3].ToString();
 
-            netmask_I1.Text = address.getWildcardMask()[0];
-            netmask_I2.Text = address.getWildcardMask()[1];
-            netmask_I3.Text = address.getWildcardMask()[2];
-            netmask_I4.Text = address.getWildcardMask()[3];
+            netmask_I1.Text = address.GetWildcardMask()[0];
+            netmask_I2.Text = address.GetWildcardMask()[1];
+            netmask_I3.Text = address.GetWildcardMask()[2];
+            netmask_I4.Text = address.GetWildcardMask()[3];
 
-            broadcast1.Text = address.getBroadcast_Binary()[0];
-            broadcast2.Text = address.getBroadcast_Binary()[1];
-            broadcast3.Text = address.getBroadcast_Binary()[2];
-            broadcast4.Text = address.getBroadcast_Binary()[3];
+            broadcast1.Text = address.GetBroadcast_Binary()[0];
+            broadcast2.Text = address.GetBroadcast_Binary()[1];
+            broadcast3.Text = address.GetBroadcast_Binary()[2];
+            broadcast4.Text = address.GetBroadcast_Binary()[3];
 
-            netzaddresse1.Text = address.getNetaddress_Binary()[0];
-            netzaddresse2.Text = address.getNetaddress_Binary()[1];
-            netzaddresse3.Text = address.getNetaddress_Binary()[2];
-            netzaddresse4.Text = address.getNetaddress_Binary()[3];
+            netzaddresse1.Text = address.GetNetaddress_Binary()[0];
+            netzaddresse2.Text = address.GetNetaddress_Binary()[1];
+            netzaddresse3.Text = address.GetNetaddress_Binary()[2];
+            netzaddresse4.Text = address.GetNetaddress_Binary()[3];
 
-            Bananary.BinaryToBananary(address.getIpBinary(address.getIpBinary()), pbarray);
+            Bananary.BinaryToBananary(MyIPAddress.GetIpBinary(address.GetIpBinary()), pbarray);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
             if (EasterEgg_clicks_to_activation == 0)
             {

@@ -2,18 +2,18 @@
 {
     internal class MyIPAddress
     {
-        int[] ip_Decimal;
-        string[] ip_Binary;
+        readonly int[] ip_Decimal;
+        readonly string[] ip_Binary;
 
         public int netmask_decimal = 16;
         public MyIPAddress(int[] ipDecimal)
         {
             this.ip_Decimal = new int[4];
             ip_Binary = new string[4];
-            setIPDecimal(ipDecimal);
+            SetIPDecimal(ipDecimal);
 
         }
-        public void setIPDecimal(int[] arr)
+        public void SetIPDecimal(int[] arr)
         {
             if (arr.Length == 4)
             {
@@ -22,29 +22,25 @@
                 ip_Decimal[2] = arr[2];
                 ip_Decimal[3] = arr[3];
             }
-            calcBinaryfromDecimal();
+            CalcBinaryfromDecimal();
         }
-        public void calcBinaryfromDecimal()
+        public void CalcBinaryfromDecimal()
         {
-            int[] arr = getIpDecimal();
-            foreach (int i in arr)
-            {
-                //Debug.WriteLine(i);
-            }
+            int[] arr = GetIpDecimal();
             ip_Binary[0] = Methods.StringToBinary(arr[0].ToString()).PadRight(8, '0');
             ip_Binary[1] = Methods.StringToBinary(arr[1].ToString()).PadRight(8, '0');
             ip_Binary[2] = Methods.StringToBinary(arr[2].ToString()).PadRight(8, '0');
             ip_Binary[3] = Methods.StringToBinary(arr[3].ToString()).PadRight(8, '0');
         }
-        public int[] getIpDecimal()
+        public int[] GetIpDecimal()
         {
             return ip_Decimal;
         }
-        public string[] getIpBinary()
+        public string[] GetIpBinary()
         {
             return ip_Binary;
         }
-        public bool[] getIpBinary(string[] stringarray)
+        public static bool[] GetIpBinary(string[] stringarray)
         {
             string bin32 = "";
             bool[] ret = new bool[32];
@@ -61,7 +57,7 @@
             return ret;
         }
 
-        public string[] getSubnetmaskBinary()
+        public string[] GetSubnetmaskBinary()
         {
             string[] ret = new string[4];
             string s = "";
@@ -73,41 +69,41 @@
             }
             if (s.Length == 32)
             {
-                ret[0] = s.Substring(0, 8);
+                ret[0] = s[..8];
                 ret[1] = s.Substring(8, 8);
                 ret[2] = s.Substring(16, 8);
                 ret[3] = s.Substring(24, 8);
             }
             return ret;
         }
-        public int[] getSubnetmaskDecimal()
+        public int[] GetSubnetmaskDecimal()
         {
             int[] ret = new int[4];
             for (int i = 0; i < ret.Length; i++)
             {
-                ret[i] = Convert.ToInt32(getSubnetmaskBinary()[i], 2);
+                ret[i] = Convert.ToInt32(GetSubnetmaskBinary()[i], 2);
             }
 
             return ret;
         }
-        public string[] getWildcardMask()
+        public string[] GetWildcardMask()
         {
             string[] ret = new string[4];
             for (int i = 0; i <= 3; i++)
             {
                 string newstring = "";
 
-                for (int l = 0; l <= getSubnetmaskBinary()[i].Length - 1; l++)
+                for (int l = 0; l <= GetSubnetmaskBinary()[i].Length - 1; l++)
                 {
                     //Debug.Write(getSubnetmaskBinary()[i][l] + "-->" + newstring + "\n");
-                    if (getSubnetmaskBinary()[i][l] == '1') newstring += "0";
+                    if (GetSubnetmaskBinary()[i][l] == '1') newstring += "0";
                     else newstring += "1";
                 }
                 ret[i] = newstring;
             }
             return ret;
         }
-        public string[] getBroadcast_Binary()
+        public string[] GetBroadcast_Binary()
         {
             string[] ret = new string[] { "", "", "", "" };
             int netmaskremainder = netmask_decimal;
@@ -115,14 +111,14 @@
             {
                 if (netmaskremainder > 8)
                 {
-                    ret[i] = getIpBinary()[i];
+                    ret[i] = GetIpBinary()[i];
                     netmaskremainder -= 8;
                 }
                 else
                 {
                     for (int j = 0; j < netmaskremainder; j++)
                     {
-                        ret[i] += getIpBinary()[i][j];
+                        ret[i] += GetIpBinary()[i][j];
                     }
                     netmaskremainder = 0;
                     ret[i] = ret[i].PadRight(8, '1');
@@ -130,7 +126,7 @@
             }
             return ret;
         }
-        public string[] getNetaddress_Binary()
+        public string[] GetNetaddress_Binary()
         {
             string[] ret = new string[] { "", "", "", "" };
             int netmaskremainder = netmask_decimal;
@@ -138,14 +134,14 @@
             {
                 if (netmaskremainder > 8)
                 {
-                    ret[i] = getIpBinary()[i];
+                    ret[i] = GetIpBinary()[i];
                     netmaskremainder -= 8;
                 }
                 else
                 {
                     for (int j = 0; j < netmaskremainder; j++)
                     {
-                        ret[i] += getIpBinary()[i][j];
+                        ret[i] += GetIpBinary()[i][j];
                     }
                     netmaskremainder = 0;
                     ret[i] = ret[i].PadRight(8, '0');

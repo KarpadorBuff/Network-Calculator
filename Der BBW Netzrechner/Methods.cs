@@ -6,8 +6,7 @@ namespace Der_BBW_Netzrechner
     {
         public static int StringToInt(string input)
         {
-            string str = null;
-            int ret;
+            string? str = null;
             int? output;
             foreach (char c in input)
             {
