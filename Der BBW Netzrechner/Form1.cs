@@ -1,5 +1,4 @@
 using Der_BBW_Netzrechner.Properties;
-using System.Diagnostics;
 
 namespace Der_BBW_Netzrechner
 {
@@ -9,7 +8,7 @@ namespace Der_BBW_Netzrechner
         {
             InitializeComponent();
         }
-        private int EasterEgg_clicks_to_activation = 10;
+        private int EasterEgg_clicks_to_activation = 1;
         MyIPAddress address;
         private readonly int[] baseIP = { 192, 168, 0, 0 };
         private PictureBox[] pbarray = new PictureBox[32];
@@ -26,7 +25,7 @@ namespace Der_BBW_Netzrechner
                         Visible = true,
                         Enabled = true,
                         Size = new Size(15, 15),
-                        Location = new Point(15 * y + i * 10, 500),
+                        Location = new Point(15 * y + i * 10, 375),
                         SizeMode = PictureBoxSizeMode.StretchImage
 
                     };
@@ -109,11 +108,11 @@ namespace Der_BBW_Netzrechner
         {
             if (EasterEgg_clicks_to_activation == 0)
             {
-                this.Size = new Size(this.Width, this.Height + 200);
-                
+                this.Size = new Size(this.Width, this.Height + 30);
+
             }
             EasterEgg_clicks_to_activation--;
-            
+
         }
     }
 }

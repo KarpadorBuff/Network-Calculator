@@ -237,7 +237,7 @@
             // hostamount
             // 
             hostamount.Location = new Point(12, 20);
-            hostamount.MaxLength = 3;
+            hostamount.MaxLength = 99999999;
             hostamount.Name = "hostamount";
             hostamount.Size = new Size(122, 23);
             hostamount.TabIndex = 19;
@@ -450,7 +450,7 @@
             // 
             pictureBox1.Image = Properties.Resources.banana_happy;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(384, -2);
+            pictureBox1.Location = new Point(426, -3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -497,7 +497,7 @@
             panel4.Controls.Add(LBinOct2);
             panel4.Location = new Point(12, 230);
             panel4.Name = "panel4";
-            panel4.Size = new Size(355, 138);
+            panel4.Size = new Size(355, 127);
             panel4.TabIndex = 27;
             // 
             // label9
@@ -695,7 +695,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(524, 561);
+            ClientSize = new Size(524, 361);
             Controls.Add(pictureBox1);
             Controls.Add(panel4);
             Controls.Add(panel3);
