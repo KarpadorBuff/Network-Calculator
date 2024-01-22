@@ -47,6 +47,8 @@
             label4 = new Label();
             label5 = new Label();
             panel1 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             label17 = new Label();
             Subnet4 = new Label();
             label14 = new Label();
@@ -90,10 +92,12 @@
             // 
             // TDecOct1
             // 
+            TDecOct1.BackColor = Color.DarkSlateGray;
+            TDecOct1.BorderStyle = BorderStyle.FixedSingle;
             TDecOct1.Location = new Point(12, 20);
             TDecOct1.MaxLength = 3;
             TDecOct1.Name = "TDecOct1";
-            TDecOct1.Size = new Size(26, 23);
+            TDecOct1.Size = new Size(26, 22);
             TDecOct1.TabIndex = 1;
             TDecOct1.TextAlign = HorizontalAlignment.Center;
             TDecOct1.TextChanged += Decimal_Text_Changed;
@@ -101,6 +105,7 @@
             // LBinOct1
             // 
             LBinOct1.AutoSize = true;
+            LBinOct1.ForeColor = Color.Gold;
             LBinOct1.Location = new Point(106, 17);
             LBinOct1.Name = "LBinOct1";
             LBinOct1.Size = new Size(55, 15);
@@ -110,30 +115,36 @@
             // 
             // TDecOct3
             // 
+            TDecOct3.BackColor = Color.DarkSlateGray;
+            TDecOct3.BorderStyle = BorderStyle.FixedSingle;
             TDecOct3.Location = new Point(66, 20);
             TDecOct3.MaxLength = 3;
             TDecOct3.Name = "TDecOct3";
-            TDecOct3.Size = new Size(26, 23);
+            TDecOct3.Size = new Size(26, 22);
             TDecOct3.TabIndex = 3;
             TDecOct3.TextAlign = HorizontalAlignment.Center;
             TDecOct3.TextChanged += Decimal_Text_Changed;
             // 
             // TDecOct2
             // 
+            TDecOct2.BackColor = Color.DarkSlateGray;
+            TDecOct2.BorderStyle = BorderStyle.FixedSingle;
             TDecOct2.Location = new Point(39, 20);
             TDecOct2.MaxLength = 3;
             TDecOct2.Name = "TDecOct2";
-            TDecOct2.Size = new Size(26, 23);
+            TDecOct2.Size = new Size(26, 22);
             TDecOct2.TabIndex = 2;
             TDecOct2.TextAlign = HorizontalAlignment.Center;
             TDecOct2.TextChanged += Decimal_Text_Changed;
             // 
             // TDecOct4
             // 
+            TDecOct4.BackColor = Color.DarkSlateGray;
+            TDecOct4.BorderStyle = BorderStyle.FixedSingle;
             TDecOct4.Location = new Point(93, 20);
             TDecOct4.MaxLength = 3;
             TDecOct4.Name = "TDecOct4";
-            TDecOct4.Size = new Size(26, 23);
+            TDecOct4.Size = new Size(26, 22);
             TDecOct4.TabIndex = 4;
             TDecOct4.TextAlign = HorizontalAlignment.Center;
             TDecOct4.TextChanged += Decimal_Text_Changed;
@@ -141,6 +152,7 @@
             // LBinOct2
             // 
             LBinOct2.AutoSize = true;
+            LBinOct2.ForeColor = Color.Gold;
             LBinOct2.Location = new Point(166, 17);
             LBinOct2.Name = "LBinOct2";
             LBinOct2.Size = new Size(55, 15);
@@ -151,6 +163,7 @@
             // LBinOct3
             // 
             LBinOct3.AutoSize = true;
+            LBinOct3.ForeColor = Color.Gold;
             LBinOct3.Location = new Point(226, 17);
             LBinOct3.Name = "LBinOct3";
             LBinOct3.Size = new Size(55, 15);
@@ -161,6 +174,7 @@
             // LBinOct4
             // 
             LBinOct4.AutoSize = true;
+            LBinOct4.ForeColor = Color.Gold;
             LBinOct4.Location = new Point(286, 17);
             LBinOct4.Name = "LBinOct4";
             LBinOct4.Size = new Size(55, 15);
@@ -170,10 +184,12 @@
             // 
             // TBnetmask
             // 
+            TBnetmask.BackColor = Color.DarkSlateGray;
+            TBnetmask.BorderStyle = BorderStyle.FixedSingle;
             TBnetmask.Location = new Point(135, 20);
             TBnetmask.MaxLength = 3;
             TBnetmask.Name = "TBnetmask";
-            TBnetmask.Size = new Size(26, 23);
+            TBnetmask.Size = new Size(26, 22);
             TBnetmask.TabIndex = 5;
             TBnetmask.Text = "16";
             TBnetmask.TextAlign = HorizontalAlignment.Center;
@@ -182,7 +198,7 @@
             // netmask4
             // 
             netmask4.AutoSize = true;
-            netmask4.ForeColor = Color.Green;
+            netmask4.ForeColor = Color.LawnGreen;
             netmask4.Location = new Point(286, 62);
             netmask4.Name = "netmask4";
             netmask4.Size = new Size(55, 15);
@@ -193,7 +209,7 @@
             // netmask3
             // 
             netmask3.AutoSize = true;
-            netmask3.ForeColor = Color.Green;
+            netmask3.ForeColor = Color.LawnGreen;
             netmask3.Location = new Point(226, 62);
             netmask3.Name = "netmask3";
             netmask3.Size = new Size(55, 15);
@@ -204,7 +220,7 @@
             // netmask2
             // 
             netmask2.AutoSize = true;
-            netmask2.ForeColor = Color.Green;
+            netmask2.ForeColor = Color.LawnGreen;
             netmask2.Location = new Point(166, 62);
             netmask2.Name = "netmask2";
             netmask2.Size = new Size(55, 15);
@@ -215,7 +231,7 @@
             // netmask1
             // 
             netmask1.AutoSize = true;
-            netmask1.ForeColor = Color.Green;
+            netmask1.ForeColor = Color.LawnGreen;
             netmask1.Location = new Point(106, 62);
             netmask1.Name = "netmask1";
             netmask1.Size = new Size(55, 15);
@@ -228,7 +244,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(125, 22);
+            label1.Location = new Point(124, 21);
             label1.Name = "label1";
             label1.Size = new Size(14, 17);
             label1.TabIndex = 18;
@@ -236,6 +252,8 @@
             // 
             // hostamount
             // 
+            hostamount.BackColor = Color.DarkSlateGray;
+            hostamount.BorderStyle = BorderStyle.FixedSingle;
             hostamount.Location = new Point(12, 20);
             hostamount.MaxLength = 99999999;
             hostamount.Name = "hostamount";
@@ -250,6 +268,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
             label3.Size = new Size(80, 17);
@@ -261,6 +280,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
             label4.Size = new Size(88, 17);
@@ -272,6 +292,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
             label5.Size = new Size(64, 17);
@@ -280,6 +301,9 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(TBnetmask);
             panel1.Controls.Add(label17);
             panel1.Controls.Add(Subnet4);
             panel1.Controls.Add(label14);
@@ -292,7 +316,6 @@
             panel1.Controls.Add(NetzAddr2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(NetzAddr1);
-            panel1.Controls.Add(TBnetmask);
             panel1.Controls.Add(ipBroadcast4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(ipBroadcast3);
@@ -302,26 +325,51 @@
             panel1.Controls.Add(TDecOct2);
             panel1.Controls.Add(TDecOct4);
             panel1.Controls.Add(ipBroadcast1);
+            panel1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(355, 157);
             panel1.TabIndex = 24;
             // 
+            // button2
+            // 
+            button2.Location = new Point(181, 21);
+            button2.Name = "button2";
+            button2.Size = new Size(20, 20);
+            button2.TabIndex = 47;
+            button2.Text = "▼";
+            button2.TextAlign = ContentAlignment.TopCenter;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += Button2_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(162, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(20, 20);
+            button1.TabIndex = 46;
+            button1.Text = "▲";
+            button1.TextAlign = ContentAlignment.TopCenter;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += ButtonUp_Click;
+            // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(12, 57);
+            label17.ForeColor = Color.LawnGreen;
+            label17.Location = new Point(12, 100);
             label17.Name = "label17";
-            label17.Size = new Size(86, 15);
+            label17.Size = new Size(85, 13);
             label17.TabIndex = 45;
             label17.Text = "Subnetz Maske";
             // 
             // Subnet4
             // 
             Subnet4.AutoSize = true;
-            Subnet4.Location = new Point(190, 57);
+            Subnet4.ForeColor = Color.LawnGreen;
+            Subnet4.Location = new Point(190, 100);
             Subnet4.Name = "Subnet4";
-            Subnet4.Size = new Size(25, 15);
+            Subnet4.Size = new Size(25, 13);
             Subnet4.TabIndex = 44;
             Subnet4.Text = "255";
             Subnet4.TextAlign = ContentAlignment.MiddleCenter;
@@ -329,18 +377,20 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(12, 105);
+            label14.ForeColor = Color.OrangeRed;
+            label14.Location = new Point(12, 85);
             label14.Name = "label14";
-            label14.Size = new Size(58, 15);
+            label14.Size = new Size(57, 13);
             label14.TabIndex = 31;
             label14.Text = "Netzaddr.";
             // 
             // Subnet1
             // 
             Subnet1.AutoSize = true;
-            Subnet1.Location = new Point(109, 57);
+            Subnet1.ForeColor = Color.LawnGreen;
+            Subnet1.Location = new Point(109, 100);
             Subnet1.Name = "Subnet1";
-            Subnet1.Size = new Size(25, 15);
+            Subnet1.Size = new Size(25, 13);
             Subnet1.TabIndex = 41;
             Subnet1.Text = "255";
             Subnet1.TextAlign = ContentAlignment.MiddleCenter;
@@ -348,9 +398,10 @@
             // Subnet3
             // 
             Subnet3.AutoSize = true;
-            Subnet3.Location = new Point(163, 57);
+            Subnet3.ForeColor = Color.LawnGreen;
+            Subnet3.Location = new Point(163, 100);
             Subnet3.Name = "Subnet3";
-            Subnet3.Size = new Size(25, 15);
+            Subnet3.Size = new Size(25, 13);
             Subnet3.TabIndex = 43;
             Subnet3.Text = "255";
             Subnet3.TextAlign = ContentAlignment.MiddleCenter;
@@ -358,18 +409,20 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(12, 81);
+            label13.ForeColor = Color.Aquamarine;
+            label13.Location = new Point(12, 70);
             label13.Name = "label13";
-            label13.Size = new Size(59, 15);
+            label13.Size = new Size(57, 13);
             label13.TabIndex = 30;
             label13.Text = "Broadcast";
             // 
             // Subnet2
             // 
             Subnet2.AutoSize = true;
-            Subnet2.Location = new Point(136, 57);
+            Subnet2.ForeColor = Color.LawnGreen;
+            Subnet2.Location = new Point(136, 100);
             Subnet2.Name = "Subnet2";
-            Subnet2.Size = new Size(25, 15);
+            Subnet2.Size = new Size(25, 13);
             Subnet2.TabIndex = 42;
             Subnet2.Text = "255";
             Subnet2.TextAlign = ContentAlignment.MiddleCenter;
@@ -377,80 +430,90 @@
             // NetzAddr4
             // 
             NetzAddr4.AutoSize = true;
-            NetzAddr4.Location = new Point(190, 105);
+            NetzAddr4.ForeColor = Color.OrangeRed;
+            NetzAddr4.Location = new Point(190, 85);
             NetzAddr4.Name = "NetzAddr4";
-            NetzAddr4.Size = new Size(25, 15);
+            NetzAddr4.Size = new Size(25, 13);
             NetzAddr4.TabIndex = 29;
             NetzAddr4.Text = "255";
             // 
             // NetzAddr3
             // 
             NetzAddr3.AutoSize = true;
-            NetzAddr3.Location = new Point(163, 105);
+            NetzAddr3.ForeColor = Color.OrangeRed;
+            NetzAddr3.Location = new Point(163, 85);
             NetzAddr3.Name = "NetzAddr3";
-            NetzAddr3.Size = new Size(25, 15);
+            NetzAddr3.Size = new Size(25, 13);
             NetzAddr3.TabIndex = 28;
             NetzAddr3.Text = "255";
             // 
             // NetzAddr2
             // 
             NetzAddr2.AutoSize = true;
-            NetzAddr2.Location = new Point(136, 105);
+            NetzAddr2.ForeColor = Color.OrangeRed;
+            NetzAddr2.Location = new Point(136, 85);
             NetzAddr2.Name = "NetzAddr2";
-            NetzAddr2.Size = new Size(25, 15);
+            NetzAddr2.Size = new Size(25, 13);
             NetzAddr2.TabIndex = 27;
             NetzAddr2.Text = "255";
             // 
             // NetzAddr1
             // 
             NetzAddr1.AutoSize = true;
-            NetzAddr1.Location = new Point(109, 105);
+            NetzAddr1.ForeColor = Color.OrangeRed;
+            NetzAddr1.Location = new Point(109, 85);
             NetzAddr1.Name = "NetzAddr1";
-            NetzAddr1.Size = new Size(25, 15);
+            NetzAddr1.Size = new Size(25, 13);
             NetzAddr1.TabIndex = 26;
             NetzAddr1.Text = "255";
             // 
             // ipBroadcast4
             // 
             ipBroadcast4.AutoSize = true;
-            ipBroadcast4.Location = new Point(190, 81);
+            ipBroadcast4.ForeColor = Color.Aquamarine;
+            ipBroadcast4.Location = new Point(190, 70);
             ipBroadcast4.Name = "ipBroadcast4";
-            ipBroadcast4.Size = new Size(25, 15);
+            ipBroadcast4.Size = new Size(25, 13);
             ipBroadcast4.TabIndex = 25;
             ipBroadcast4.Text = "255";
             // 
             // ipBroadcast3
             // 
             ipBroadcast3.AutoSize = true;
-            ipBroadcast3.Location = new Point(163, 81);
+            ipBroadcast3.ForeColor = Color.Aquamarine;
+            ipBroadcast3.Location = new Point(163, 70);
             ipBroadcast3.Name = "ipBroadcast3";
-            ipBroadcast3.Size = new Size(25, 15);
+            ipBroadcast3.Size = new Size(25, 13);
             ipBroadcast3.TabIndex = 24;
             ipBroadcast3.Text = "255";
             // 
             // ipBroadcast2
             // 
             ipBroadcast2.AutoSize = true;
-            ipBroadcast2.Location = new Point(136, 81);
+            ipBroadcast2.ForeColor = Color.Aquamarine;
+            ipBroadcast2.Location = new Point(136, 70);
             ipBroadcast2.Name = "ipBroadcast2";
-            ipBroadcast2.Size = new Size(25, 15);
+            ipBroadcast2.Size = new Size(25, 13);
             ipBroadcast2.TabIndex = 23;
             ipBroadcast2.Text = "255";
             // 
             // ipBroadcast1
             // 
             ipBroadcast1.AutoSize = true;
-            ipBroadcast1.Location = new Point(109, 81);
+            ipBroadcast1.ForeColor = Color.Aquamarine;
+            ipBroadcast1.Location = new Point(109, 70);
             ipBroadcast1.Name = "ipBroadcast1";
-            ipBroadcast1.Size = new Size(25, 15);
+            ipBroadcast1.Size = new Size(25, 13);
             ipBroadcast1.TabIndex = 22;
             ipBroadcast1.Text = "255";
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = Properties.Resources.banana_happy;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(426, -3);
+            pictureBox1.Location = new Point(416, -3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -505,7 +568,7 @@
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.Maroon;
+            label9.ForeColor = Color.OrangeRed;
             label9.Location = new Point(12, 47);
             label9.Name = "label9";
             label9.Size = new Size(71, 15);
@@ -517,7 +580,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = Color.DarkCyan;
+            label10.ForeColor = Color.Aquamarine;
             label10.Location = new Point(12, 32);
             label10.Name = "label10";
             label10.Size = new Size(59, 15);
@@ -527,7 +590,7 @@
             // netzaddresse1
             // 
             netzaddresse1.AutoSize = true;
-            netzaddresse1.ForeColor = Color.Maroon;
+            netzaddresse1.ForeColor = Color.OrangeRed;
             netzaddresse1.Location = new Point(106, 47);
             netzaddresse1.Name = "netzaddresse1";
             netzaddresse1.Size = new Size(55, 15);
@@ -538,7 +601,7 @@
             // netzaddresse2
             // 
             netzaddresse2.AutoSize = true;
-            netzaddresse2.ForeColor = Color.Maroon;
+            netzaddresse2.ForeColor = Color.OrangeRed;
             netzaddresse2.Location = new Point(166, 47);
             netzaddresse2.Name = "netzaddresse2";
             netzaddresse2.Size = new Size(55, 15);
@@ -549,7 +612,7 @@
             // netzaddresse3
             // 
             netzaddresse3.AutoSize = true;
-            netzaddresse3.ForeColor = Color.Maroon;
+            netzaddresse3.ForeColor = Color.OrangeRed;
             netzaddresse3.Location = new Point(226, 47);
             netzaddresse3.Name = "netzaddresse3";
             netzaddresse3.Size = new Size(55, 15);
@@ -560,7 +623,7 @@
             // netzaddresse4
             // 
             netzaddresse4.AutoSize = true;
-            netzaddresse4.ForeColor = Color.Maroon;
+            netzaddresse4.ForeColor = Color.OrangeRed;
             netzaddresse4.Location = new Point(286, 47);
             netzaddresse4.Name = "netzaddresse4";
             netzaddresse4.Size = new Size(55, 15);
@@ -571,7 +634,7 @@
             // broadcast1
             // 
             broadcast1.AutoSize = true;
-            broadcast1.ForeColor = Color.DarkCyan;
+            broadcast1.ForeColor = Color.Aquamarine;
             broadcast1.Location = new Point(106, 32);
             broadcast1.Name = "broadcast1";
             broadcast1.Size = new Size(55, 15);
@@ -582,7 +645,7 @@
             // broadcast2
             // 
             broadcast2.AutoSize = true;
-            broadcast2.ForeColor = Color.DarkCyan;
+            broadcast2.ForeColor = Color.Aquamarine;
             broadcast2.Location = new Point(166, 32);
             broadcast2.Name = "broadcast2";
             broadcast2.Size = new Size(55, 15);
@@ -593,7 +656,7 @@
             // broadcast3
             // 
             broadcast3.AutoSize = true;
-            broadcast3.ForeColor = Color.DarkCyan;
+            broadcast3.ForeColor = Color.Aquamarine;
             broadcast3.Location = new Point(226, 32);
             broadcast3.Name = "broadcast3";
             broadcast3.Size = new Size(55, 15);
@@ -604,7 +667,7 @@
             // broadcast4
             // 
             broadcast4.AutoSize = true;
-            broadcast4.ForeColor = Color.DarkCyan;
+            broadcast4.ForeColor = Color.Aquamarine;
             broadcast4.Location = new Point(286, 32);
             broadcast4.Name = "broadcast4";
             broadcast4.Size = new Size(55, 15);
@@ -629,7 +692,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.Green;
+            label7.ForeColor = Color.LawnGreen;
             label7.Location = new Point(12, 62);
             label7.Name = "label7";
             label7.Size = new Size(88, 15);
@@ -641,6 +704,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.Gold;
             label6.Location = new Point(12, 17);
             label6.Name = "label6";
             label6.Size = new Size(21, 15);
@@ -695,11 +759,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(524, 361);
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(514, 361);
             Controls.Add(pictureBox1);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            ForeColor = SystemColors.ControlText;
+            MaximizeBox = false;
+            MaximumSize = new Size(530, 430);
+            MinimumSize = new Size(530, 400);
             Name = "Form1";
             Text = "Netzrechner";
             Load += Form1_Load;
@@ -768,5 +837,7 @@
         private Label Subnet3;
         private Label Subnet2;
         private PictureBox pictureBox1;
+        private Button button1;
+        private Button button2;
     }
 }

@@ -28,7 +28,6 @@ namespace Der_BBW_Netzrechner
         }
         public static string StringToBinary(string decimalvalue)
         {
-            Debug.WriteLine(decimalvalue);
             if (decimalvalue == "") return "";
             else return Convert.ToString(Convert.ToInt16(decimalvalue), 2).PadLeft(8, '0');
         }
