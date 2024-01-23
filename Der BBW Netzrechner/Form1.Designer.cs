@@ -333,18 +333,20 @@
             // 
             // button2
             // 
-            button2.Location = new Point(181, 21);
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(185, 21);
             button2.Name = "button2";
             button2.Size = new Size(20, 20);
             button2.TabIndex = 47;
             button2.Text = "▼";
             button2.TextAlign = ContentAlignment.TopCenter;
             button2.UseVisualStyleBackColor = true;
-            button2.Click += Button2_Click;
+            button2.Click += ButtonDown_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(162, 21);
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(164, 21);
             button1.Name = "button1";
             button1.Size = new Size(20, 20);
             button1.TabIndex = 46;

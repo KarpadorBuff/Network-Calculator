@@ -1,4 +1,5 @@
 using Der_BBW_Netzrechner.Properties;
+using System.Globalization;
 
 namespace Der_BBW_Netzrechner
 {
@@ -12,6 +13,7 @@ namespace Der_BBW_Netzrechner
         readonly MyIPAddress address = new(new int[] { 192, 168, 30, 101 });
         bool finished_loading = false;
         private readonly PictureBox[] pbarray = new PictureBox[32];
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -102,6 +104,30 @@ namespace Der_BBW_Netzrechner
             Bananary.BinaryToBananary(MyIPAddress.GetIpBinary(address.GetIpBinary()), pbarray);
             if (address.netmask_decimal != Methods.StringToInt(TBnetmask.Text))
                 address.netmask_decimal = Methods.StringToInt(TBnetmask.Text);
+            if(address.netmask_decimal >= 0 && address.netmask_decimal <= 35)
+            {
+                CultureInfo elGR = CultureInfo.CreateSpecificCulture("el-GR");
+                if (address.netmask_decimal < 32)
+                    hostamount.Text = (Math.Pow(2, 32 - address.netmask_decimal) - 2).ToString("0,0", elGR);
+                else switch (address.netmask_decimal)
+                    {
+                        default:
+                            hostamount.Text = "now you broke it...";
+                            break;
+                        case 32:
+                            hostamount.Text = "whatchu tryna do?";
+                            break;
+                        case 33:
+                            hostamount.Text = "ur makin it worse";
+                            break;
+                        case 34:
+                            hostamount.Text = "no STOP!";
+                            break;
+
+
+                    }
+
+            }
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -117,14 +143,14 @@ namespace Der_BBW_Netzrechner
 
         private void ButtonUp_Click(object sender, EventArgs e)
         {
-            if(address.netmask_decimal < 32)
+            if(address.netmask_decimal < 35)
             address.netmask_decimal++;
             TBnetmask.Text = address.netmask_decimal.ToString();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void ButtonDown_Click(object sender, EventArgs e)
         {
-            if (address.netmask_decimal > 1)
+            if (address.netmask_decimal > 0)
             address.netmask_decimal--;
             TBnetmask.Text = address.netmask_decimal.ToString();
         }
